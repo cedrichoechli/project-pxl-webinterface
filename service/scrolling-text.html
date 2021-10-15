@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+    <script>
+
+        let root = document.documentElement;
+
+        function updateRed(val) {
+          document.getElementById('redInput').value=val; 
+          root.style.setProperty('--red', val);
+        }
+
+        function updateGreen(val) {
+          document.getElementById('greenInput').value=val; 
+          root.style.setProperty('--green', val);
+        }
+
+        function updateBlue(val) {
+          document.getElementById('blueInput').value=val; 
+          root.style.setProperty('--blue', val);
+        }
+    </script>
+
+    <style>
+
+        :root {
+        --red: 255;
+        --green: 255;
+        --blue: 255;
+        }
+
+        .box {
+        background-color: rgb(var(--red),var(--green),var(--blue));
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        left: 20%;
+        top: 35%;
+        }
+
+    </style>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Project pxl Webinterface </title>
+        <meta name=”robots” content=”noindex,nofollow”>
+    </head>
+
+    <body>
+        <header>
+            <hgroup>
+                <h1> Project pxl</h1>
+            </hgroup>
+            <nav>
+                <ul>
+                    <a href="../index.html">Home</a>
+                    &nbsp;
+                    <a href="">Scrolling Text</a>
+                    &nbsp;
+                    <a href="pictures.php">Pictures</a>
+                    &nbsp;
+                    <a href="animations.php">Animations</a>
+                </ul>
+            </nav>
+        </header>
+        
+        <section>
+            <h2>Scrolling Text</h2>
+            <h3>Hier kannst du Text auf dem Display anzeigen lassen.</h3>
+            <form action="displayText.php" method="post">
+                <label for="message">Text:</label>
+                <input type="text" id="message" name="message"><br><br>
+                <label for="duration">Wiederholungen:</label>
+                <input type="text" id="duration" name="duration" value="2"><br><br>
+                <label for="speed">Geschwindigkeit:</label>
+                <input type="text" id="speed" name="speed" value="4"><br><br>
+                <label for="red">Rot:</label>
+                <input type="range" min="0" max="255" value="255" name="red" id="red" onchange="updateRed(this.value);"><input type="text" id="redInput" value="255"><br><br>
+                <label for="green">Grün:</label>
+                <input type="range" min="0" max="255" value="255" name="green" id="green" onchange="updateGreen(this.value);"><input type="text" id="greenInput" value="255"><br><br>
+                <label for="blue">Blau:</label>
+                <input type="range" min="0" max="255" value="255" name="blue" id="blue" onchange="updateBlue(this.value);"><input type="text" id="blueInput" value="255"><br><br>
+                <input type="submit" value="Senden">
+                <br>
+                <div class="box"></div>
+                <br>
+        
+            </form>
+        </section>
+
+        <br>
+
+        <footer>
+            <p>
+                All Rights Reserved. Copyright 2021 by Cedric Hoechli.
+            </p>
+        </footer
+    </body>
+</html>
+      
+      
