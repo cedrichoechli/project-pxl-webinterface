@@ -10,7 +10,7 @@
     <body>
         <header>
             <hgroup>
-                <h1> Project pxl</h1>
+                <h1> project-pxl</h1>
             </hgroup>
             <nav>
                 <ul>
