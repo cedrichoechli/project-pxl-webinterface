@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Project pxl Webinterface </title>
+        <title>project-pxl Webinterface </title>
         <meta name=”robots” content=”noindex,nofollow”>
     </head>
 
