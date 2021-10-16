@@ -62,6 +62,22 @@
                 <input type="submit" value="Senden">
             </form>
         </section>
+        <section>
+            <h3>Loop</h3>
+            <form action="loopAnimations.php" method="post">
+                <label for="duration">Dauer pro Animation in Sekunden:</label>
+                <br>
+                <input type="text" id="duration" name="duration" value="20">
+                <br>
+                <br>
+                <input type="submit" value="Start">
+            </form>
+            <br>
+            <br>
+            <form action="killAnimations.php" method="post">
+                <input type="submit" value="Stop">
+            </form>
+        </section>
         <br>
         <br>
         <section>

@@ -73,6 +73,22 @@
                 <input type="submit" value="Senden">
             </form>
         </section>
+        <section>
+            <h3>Loop</h3>
+            <form action="loopPictures.php" method="post">
+                <label for="duration">Dauer pro Bild in Sekunden:</label>
+                <br>
+                <input type="text" id="duration" name="duration" value="20">
+                <br>
+                <br>
+                <input type="submit" value="Start">
+            </form>
+            <br>
+            <br>
+            <form action="killPictures.php" method="post">
+                <input type="submit" value="Stop">
+            </form>
+        </section>
         <br>
         <br>
         <section>
