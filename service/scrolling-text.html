@@ -6,17 +6,17 @@
         let root = document.documentElement;
 
         function updateRed(val) {
-          document.getElementById('redInput').value=val; 
+          document.getElementById('redInput').value=val;
           root.style.setProperty('--red', val);
         }
 
         function updateGreen(val) {
-          document.getElementById('greenInput').value=val; 
+          document.getElementById('greenInput').value=val;
           root.style.setProperty('--green', val);
         }
 
         function updateBlue(val) {
-          document.getElementById('blueInput').value=val; 
+          document.getElementById('blueInput').value=val;
           root.style.setProperty('--blue', val);
         }
     </script>
@@ -31,11 +31,9 @@
 
         .box {
         background-color: rgb(var(--red),var(--green),var(--blue));
-        position: absolute;
+        position: static;
         height: 100px;
         width: 100px;
-        left: 20%;
-        top: 35%;
         }
 
     </style>
@@ -63,7 +61,7 @@
                 </ul>
             </nav>
         </header>
-        
+
         <section>
             <h2>Scrolling Text</h2>
             <h3>Hier kannst du Text auf dem Display anzeigen lassen.</h3>
@@ -80,11 +78,10 @@
                 <input type="range" min="0" max="255" value="255" name="green" id="green" onchange="updateGreen(this.value);"><input type="text" id="greenInput" value="255"><br><br>
                 <label for="blue">Blau:</label>
                 <input type="range" min="0" max="255" value="255" name="blue" id="blue" onchange="updateBlue(this.value);"><input type="text" id="blueInput" value="255"><br><br>
+                <div class="box"></div><br><br>
                 <input type="submit" value="Senden">
                 <br>
-                <div class="box"></div>
-                <br>
-        
+
             </form>
         </section>
 
